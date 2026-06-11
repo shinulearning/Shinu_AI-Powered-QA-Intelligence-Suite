@@ -1,0 +1,4 @@
+Current Release
+    - Authentication Module
+    - Equipment Sync
+    - Notification Service

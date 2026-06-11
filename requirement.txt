@@ -2,3 +2,4 @@ pip install crewai
 pip install 'crewai[tools]'
 pip install python-dotenv
 pip install litellm
+pip install pandas

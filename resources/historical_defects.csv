@@ -1,0 +1,977 @@
+Summary,Issue key,Issue id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project lead id,Project description,Priority,Resolution,Assignee,Assignee Id,Reporter,Reporter Id,Creator,Creator Id,Created,Updated,Last Viewed,Resolved,Due date,Votes,Description,Environment,Watchers,Watchers Id,Original estimate,Remaining Estimate,Time Spent,Work Ratio,Σ Original Estimate,Σ Remaining Estimate,Σ Time Spent,Security Level,Custom field (Development),Custom field (Issue color),Custom field (Project),Custom field (Rank),Sprint,Custom field (Start date),Custom field (Story point estimate),Custom field (Team),Custom field (Vulnerability),Parent,Parent key,Parent summary,Status Category,Status Category Changed
+BUG-006: Equipment Detail Mismatch,SCRUM-10,10009,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,Medium,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 1:14 PM,11/Jun/26 1:14 PM,11/Jun/26 1:14 PM,,,0,"h3. Summary
+
+Equipment specifications displayed in UI do not match master database records.
+
+h3. Description
+
+Several equipment records display incorrect serial number and capacity information.
+
+h3. Steps to Reproduce
+
+# Search equipment ID EQ-45872.
+# Open Equipment Details page.
+# Compare displayed data with Master Database.
+
+h3. Expected Result
+
+Equipment details should match master records.
+
+h3. Actual Result
+
+Incorrect capacity and serial number shown.
+
+h3. Business Impact
+
+Incorrect equipment information may affect operational decisions.
+
+h3. Severity
+
+Major
+
+h3. Priority
+
+Medium
+
+h3. Module
+
+Equipment Management",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,0|i0001z:,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 1:14 PM
+BUG-005: Formula Calculation Mismatch,SCRUM-9,10008,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,Medium,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 1:14 PM,11/Jun/26 1:14 PM,11/Jun/26 1:14 PM,,,0,"h3. Summary
+
+Energy consumption formula returns incorrect calculation results.
+
+h3. Description
+
+Application-calculated energy efficiency value differs from expected business formula by approximately 12%.
+
+h3. Formula
+
+Expected:
+Efficiency = Output Power / Input Power × 100
+
+h3. Observed
+
+System applies incorrect multiplier causing inaccurate results.
+
+h3. Steps to Reproduce
+
+# Enter sample values.
+# Execute calculation.
+# Compare with expected result.
+
+h3. Expected Result
+
+Calculation should match approved business formula.
+
+h3. Actual Result
+
+Calculated value differs significantly.
+
+h3. Severity
+
+Major
+
+h3. Priority
+
+High
+
+h3. Module
+
+Business Logic Engine",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,0|i0001r:,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 1:14 PM
+BUG-004: Multi-Language Translation Display Issue,SCRUM-8,10007,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,Medium,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 1:13 PM,11/Jun/26 1:13 PM,11/Jun/26 1:13 PM,,,0,"h3. Summary
+
+Japanese language labels are displayed incorrectly on Equipment Registration page.
+
+h3. Description
+
+Several field labels appear in English while application language is configured as Japanese.
+
+h3. Steps to Reproduce
+
+# Login to application.
+# Change language to Japanese.
+# Navigate to Equipment Registration.
+# Verify field labels.
+
+h3. Expected Result
+
+All labels should be translated into Japanese.
+
+h3. Actual Result
+
+Mixed English and Japanese labels displayed.
+
+h3. Impact
+
+User confusion and localization compliance issue.
+
+h3. Severity
+
+Minor
+
+h3. Priority
+
+Medium
+
+h3. Module
+
+Localization / UI",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,0|i0001j:,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 1:13 PM
+BUG-003: Firewall Restriction Preventing Cross-Server Communication,SCRUM-7,10006,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,Medium,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 1:13 PM,11/Jun/26 1:13 PM,11/Jun/26 1:13 PM,,,0,"h3. Summary
+
+Application server unable to establish communication with external reporting server.
+
+h3. Description
+
+Users are unable to generate reports because requests from Application Server to Reporting Server are blocked.
+
+h3. Steps to Reproduce
+
+# Login to application.
+# Open Reports Module.
+# Generate monthly report.
+# Observe error.
+
+h3. Expected Result
+
+Report should be generated successfully.
+
+h3. Actual Result
+
+Communication timeout error displayed.
+
+h3. Technical Observation
+
+Port 8443 connection blocked by firewall policy.
+
+h3. Severity
+
+Major
+
+h3. Priority
+
+High
+
+h3. Module
+
+Infrastructure / Network",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,0|i0001b:,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 1:13 PM
+BUG-002: Database Synchronization Failure,SCRUM-6,10005,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,Medium,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 1:11 PM,11/Jun/26 1:12 PM,11/Jun/26 1:12 PM,,30/Jun/26 12:00 AM,0,"h3. Summary
+
+Customer master data synchronization fails between Application Server and Central Database.
+
+h3. Description
+
+Newly created customer records are not being synchronized to the reporting database resulting in inconsistent data across systems.
+
+h3. Steps to Reproduce
+
+# Create a new customer record.
+# Verify successful save.
+# Check Reporting Database.
+# Verify synchronization status.
+
+h3. Expected Result
+
+Customer data should synchronize within 5 minutes.
+
+h3. Actual Result
+
+Records remain unavailable in Reporting Database.
+
+h3. Error Log
+
+Connection timeout during synchronization job execution.
+
+h3. Severity
+
+Major
+
+h3. Priority
+
+High
+
+h3. Module
+
+Data Synchronization",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,0|i00013:,SCRUM Sprint 0,11/Jun/26 12:00 AM,,,,,,,To Do,11/Jun/26 1:11 PM
+BUG-001: User Authority Verification Failure,SCRUM-5,10004,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,High,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 1:09 PM,11/Jun/26 1:11 PM,11/Jun/26 4:50 PM,,30/Jun/26 12:00 AM,0,"h3. Summary
+
+Unauthorized users are able to access restricted administrative functions despite lacking required permissions.
+
+h3. Description
+
+During validation of role-based access control, users assigned with ""Viewer"" role were able to access the User Management page and perform edit operations.
+
+h3. Steps to Reproduce
+
+# Login as Viewer role user.
+# Navigate to Administration → User Management.
+# Edit an existing user profile.
+# Save changes.
+
+h3. Expected Result
+
+Viewer users should have read-only access and should not be able to modify user information.
+
+h3. Actual Result
+
+System allows user modifications without validating authority.
+
+h3. Environment
+
+* QA Environment
+* Build 5.2.1
+
+h3. Severity
+
+Critical
+
+h3. Priority
+
+High
+
+h3. Module
+
+Authorization / Security",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,0|i0000v:,SCRUM Sprint 0,11/Jun/26 12:00 AM,,,,,,,To Do,11/Jun/26 1:09 PM
+Subtask 2.1,SCRUM-4,10003,Subtask,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 12:44 PM,11/Jun/26 12:44 PM,,,,0,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,0|i0000n:,SCRUM Sprint 0,,,,,10001,SCRUM-2,Task 2,To Do,11/Jun/26 12:44 PM
+Task 3,SCRUM-3,10002,Feature,In Progress,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 12:44 PM,11/Jun/26 12:44 PM,,,,0,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,0|i0000f:,,,,,,,,,In Progress,11/Jun/26 12:44 PM
+Task 2,SCRUM-2,10001,Story,In Progress,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 12:44 PM,11/Jun/26 12:44 PM,,,21/Jun/26 12:00 AM,0,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,0|i00007:,SCRUM Sprint 0,,,,,,,,In Progress,11/Jun/26 12:44 PM
+Sprint 0 - Testing,SCRUM-1,10000,Task,In Progress,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,High,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 12:44 PM,11/Jun/26 1:17 PM,11/Jun/26 1:15 PM,,18/Jun/26 12:00 AM,0,"*Summary:*
+Perform comprehensive end-to-end functional testing of the application covering user authorization, data synchronization, system integrations, multilingual support, business rule validations, and equipment management functionalities.
+
+*Description:*
+Execute end-to-end testing to validate the application's core business functions and ensure system stability, data integrity, security compliance, and seamless integration across all modules.
+
+*Scope:*
+
+* Verify user authentication and role-based authorization controls.
+* Validate data synchronization between application and backend databases.
+* Verify communication between application servers and integrated systems.
+* Validate multilingual support and localization functionality.
+* Verify business formulas, calculations, and rule implementations.
+* Validate equipment master data accuracy and consistency.
+* Perform regression testing on impacted modules.
+* Verify error handling, logging, and exception scenarios.
+* Validate UI, functional, and integration workflows.
+
+*Test Coverage:*
+
+# User Authority Verification
+# Database Synchronization Validation
+# Cross-Server Connectivity Validation
+# Multi-Language Support Testing
+# Formula & Business Rule Validation
+# Equipment Information Validation
+
+*Expected Deliverables:*
+
+* Test Execution Report
+* Defect Log and Analysis Report
+* Regression Summary
+* Risk Assessment Report
+* Release Readiness Recommendation
+
+*Acceptance Criteria:*
+
+* All critical and major test scenarios executed successfully.
+* No open critical defects.
+* Data integrity maintained across integrated systems.
+* Business calculations match approved specifications.
+* User authorization controls function as per requirements.
+* Application ready for release recommendation based on test results.
+
+*Priority:* High
+*Type:* Testing Task
+*Estimated Effort:* 5 Person-Days
+*Assignee:* QC Team
+*Status:* To Do",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,0|i0000b:,SCRUM Sprint 0,11/Jun/26 12:00 AM,,,,,,,In Progress,11/Jun/26 1:17 PM
+BUG-007: Session Token Not Invalidated After Logout,SCRUM-11,10010,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,High,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 2:00 PM,11/Jun/26 2:00 PM,11/Jun/26 2:00 PM,,30/Jun/26 12:00 AM,0,"h3. Summary
+
+User session remains active even after clicking the Logout button.
+
+h3. Description
+
+After logging out, the previous session token can still be used to access authenticated API endpoints and pages via browser back navigation.
+
+h3. Steps to Reproduce
+
+# Login to the application.
+# Navigate to any authenticated page.
+# Click Logout.
+# Press the browser Back button or replay a captured API request using the old session token.
+
+h3. Expected Result
+
+Session token should be invalidated on the server immediately after logout, and any subsequent request should redirect to the login page.
+
+h3. Actual Result
+
+Authenticated pages and API calls remain accessible using the old session token.
+
+h3. Severity
+
+Critical
+
+h3. Priority
+
+High
+
+h3. Module
+
+Authentication / Security",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 2:00 PM
+BUG-008: Password Reset Link Does Not Expire,SCRUM-12,10011,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,High,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 2:05 PM,11/Jun/26 2:05 PM,11/Jun/26 2:05 PM,,30/Jun/26 12:00 AM,0,"h3. Summary
+
+Password reset link remains valid indefinitely instead of expiring after the documented time window.
+
+h3. Description
+
+The ""Forgot Password"" email link is expected to expire 30 minutes after generation, but the link continues to work even after several days.
+
+h3. Steps to Reproduce
+
+# Trigger a password reset from the login page.
+# Wait more than 30 minutes.
+# Open the reset link from the email.
+# Set a new password.
+
+h3. Expected Result
+
+Reset link should be rejected and display an ""expired link"" message after 30 minutes.
+
+h3. Actual Result
+
+Reset link allows password change regardless of how much time has passed.
+
+h3. Severity
+
+Critical
+
+h3. Priority
+
+High
+
+h3. Module
+
+Authentication / Security",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 2:05 PM
+BUG-009: File Upload Accepts Unsupported File Types,SCRUM-13,10012,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,Medium,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 2:10 PM,11/Jun/26 2:10 PM,11/Jun/26 2:10 PM,,,0,"h3. Summary
+
+Document upload control allows executable and script files despite UI restrictions.
+
+h3. Description
+
+The Attachments section is intended to allow only PDF, DOCX, and image files, but the upload accepts .exe and .js files without any validation error.
+
+h3. Steps to Reproduce
+
+# Open any record with an Attachments section.
+# Click Upload File.
+# Select a file with .exe extension.
+# Submit the upload.
+
+h3. Expected Result
+
+Upload should be rejected with a message listing the allowed file types.
+
+h3. Actual Result
+
+File is uploaded and stored successfully regardless of extension.
+
+h3. Severity
+
+Major
+
+h3. Priority
+
+Medium
+
+h3. Module
+
+File Management",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 2:10 PM
+BUG-010: Pagination Displays Duplicate Records on Subsequent Pages,SCRUM-14,10013,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,Medium,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 2:15 PM,11/Jun/26 2:15 PM,11/Jun/26 2:15 PM,,,0,"h3. Summary
+
+List view pagination shows the same records repeated across multiple pages.
+
+h3. Description
+
+When navigating through paginated results on the Customer List page, several records from page 1 reappear on page 2.
+
+h3. Steps to Reproduce
+
+# Navigate to Customer List.
+# Set page size to 20.
+# Go to page 1 and note the last 5 records.
+# Go to page 2.
+# Compare the first 5 records with the last 5 records of page 1.
+
+h3. Expected Result
+
+Each record should appear only once across all pages.
+
+h3. Actual Result
+
+Several records are duplicated between page 1 and page 2.
+
+h3. Severity
+
+Major
+
+h3. Priority
+
+Medium
+
+h3. Module
+
+UI / Data Display",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 2:15 PM
+BUG-011: Search Returns No Results for Partial Keyword Match,SCRUM-15,10014,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,Medium,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 2:20 PM,11/Jun/26 2:20 PM,11/Jun/26 2:20 PM,,,0,"h3. Summary
+
+Global search fails to return results when a partial keyword is entered.
+
+h3. Description
+
+Searching for ""Equip"" does not return records containing ""Equipment"", even though partial match search is a documented requirement.
+
+h3. Steps to Reproduce
+
+# Open the global Search bar.
+# Enter a partial keyword, e.g. ""Equip"".
+# Press Enter.
+
+h3. Expected Result
+
+Search should return all records whose fields contain the entered substring.
+
+h3. Actual Result
+
+Search returns ""No results found"" for partial keywords; only exact matches return results.
+
+h3. Severity
+
+Minor
+
+h3. Priority
+
+Medium
+
+h3. Module
+
+Search",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 2:20 PM
+BUG-012: Email Notification Not Triggered on Status Change,SCRUM-16,10015,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,High,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 2:25 PM,11/Jun/26 2:25 PM,11/Jun/26 2:25 PM,,30/Jun/26 12:00 AM,0,"h3. Summary
+
+Users are not notified by email when the status of their assigned ticket changes.
+
+h3. Description
+
+Per the notification configuration, an email should be sent to the assignee whenever a ticket status changes from ""Open"" to ""Resolved"". This email is not being sent.
+
+h3. Steps to Reproduce
+
+# Open a ticket assigned to a test user.
+# Change the status from Open to Resolved.
+# Save the change.
+# Check the assignee's mailbox.
+
+h3. Expected Result
+
+Assignee should receive an email notification confirming the status change.
+
+h3. Actual Result
+
+No email notification is received.
+
+h3. Error Log
+
+Notification queue shows job completed with zero recipients.
+
+h3. Severity
+
+Major
+
+h3. Priority
+
+High
+
+h3. Module
+
+Notification Engine",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 2:25 PM
+BUG-013: Date Field Displays Incorrect Timezone Offset,SCRUM-17,10016,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,Medium,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 2:30 PM,11/Jun/26 2:30 PM,11/Jun/26 2:30 PM,,,0,"h3. Summary
+
+Timestamps on the Activity Log are displayed in UTC instead of the user's local timezone.
+
+h3. Description
+
+The Activity Log shows event times that are offset by several hours compared to the user's configured timezone in profile settings.
+
+h3. Steps to Reproduce
+
+# Set user profile timezone to ""Asia/Tokyo"".
+# Perform an action that creates an activity log entry.
+# Open the Activity Log.
+# Compare the displayed timestamp with the system clock.
+
+h3. Expected Result
+
+Timestamps should be converted and displayed according to the user's configured timezone.
+
+h3. Actual Result
+
+Timestamps are displayed in UTC regardless of profile timezone setting.
+
+h3. Severity
+
+Minor
+
+h3. Priority
+
+Medium
+
+h3. Module
+
+Localization / UI",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 2:30 PM
+BUG-014: Export to Excel Generates Corrupted File for Large Datasets,SCRUM-18,10017,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,High,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 2:35 PM,11/Jun/26 2:35 PM,11/Jun/26 2:35 PM,,30/Jun/26 12:00 AM,0,"h3. Summary
+
+Exporting more than 10,000 records to Excel produces a file that cannot be opened.
+
+h3. Description
+
+When exporting the full Equipment list (approximately 15,000 records) to Excel, the downloaded .xlsx file fails to open in Microsoft Excel with a ""file format or extension is not valid"" error.
+
+h3. Steps to Reproduce
+
+# Navigate to Equipment List.
+# Remove all filters so that all ~15,000 records are in scope.
+# Click Export to Excel.
+# Open the downloaded file in Microsoft Excel.
+
+h3. Expected Result
+
+Exported file should open correctly and contain all records, optionally split across multiple sheets.
+
+h3. Actual Result
+
+Excel reports the file is corrupted and cannot be opened.
+
+h3. Severity
+
+Major
+
+h3. Priority
+
+High
+
+h3. Module
+
+Reporting / Export",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 2:35 PM
+BUG-015: Form Validation Allows Special Characters in Name Field,SCRUM-19,10018,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,Low,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 2:40 PM,11/Jun/26 2:40 PM,11/Jun/26 2:40 PM,,,0,"h3. Summary
+
+The Customer Name field accepts special characters that should be blocked by validation.
+
+h3. Description
+
+The First Name and Last Name fields on the Customer Registration form are documented to allow only letters, spaces, and hyphens, but currently accept characters such as < > { } ; and emoji.
+
+h3. Steps to Reproduce
+
+# Navigate to Customer Registration.
+# Enter ""<script>"" in the First Name field.
+# Complete the remaining required fields.
+# Submit the form.
+
+h3. Expected Result
+
+Form should display a validation error and prevent submission when invalid characters are entered.
+
+h3. Actual Result
+
+Form submits successfully and stores the value as entered.
+
+h3. Severity
+
+Minor
+
+h3. Priority
+
+Low
+
+h3. Module
+
+Input Validation",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 2:40 PM
+BUG-016: Concurrent Edits Cause Silent Data Overwrite,SCRUM-20,10019,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,High,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 2:45 PM,11/Jun/26 2:45 PM,11/Jun/26 2:45 PM,,30/Jun/26 12:00 AM,0,"h3. Summary
+
+When two users edit the same record simultaneously, the second save silently overwrites the first user's changes.
+
+h3. Description
+
+There is no optimistic locking or conflict warning when two users open the same Equipment record for editing and save changes within a short time of each other.
+
+h3. Steps to Reproduce
+
+# User A opens Equipment record EQ-12345 for editing.
+# User B opens the same record for editing.
+# User A updates the Capacity field and saves.
+# User B updates the Location field and saves.
+
+h3. Expected Result
+
+System should warn User B that the record was modified since it was loaded and prompt to merge or reload.
+
+h3. Actual Result
+
+User B's save overwrites User A's change to the Capacity field without any warning.
+
+h3. Severity
+
+Critical
+
+h3. Priority
+
+High
+
+h3. Module
+
+Data Integrity",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 2:45 PM
+BUG-017: Session Timeout Does Not Redirect User to Login Page,SCRUM-21,10020,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,Medium,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 2:50 PM,11/Jun/26 2:50 PM,11/Jun/26 2:50 PM,,,0,"h3. Summary
+
+After the session expires due to inactivity, the application does not redirect the user to the login page.
+
+h3. Description
+
+Once the configured 30-minute idle timeout is reached, subsequent navigation within the application shows blank pages or partial data instead of redirecting to the login screen.
+
+h3. Steps to Reproduce
+
+# Login to the application.
+# Leave the browser tab idle for more than 30 minutes.
+# Click on any navigation menu item.
+
+h3. Expected Result
+
+User should be redirected to the login page with a ""session expired"" message.
+
+h3. Actual Result
+
+Page attempts to load and shows empty content or a generic error without redirecting to login.
+
+h3. Severity
+
+Major
+
+h3. Priority
+
+Medium
+
+h3. Module
+
+Session Management",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 2:50 PM
+BUG-018: Column Sort Order Not Persisted After Page Refresh,SCRUM-22,10021,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,Low,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 2:55 PM,11/Jun/26 2:55 PM,11/Jun/26 2:55 PM,,,0,"h3. Summary
+
+Column sort order selected by the user resets after refreshing the page.
+
+h3. Description
+
+On the Tickets List page, sorting by ""Priority"" column is not retained after the browser is refreshed; the list reverts to the default sort order.
+
+h3. Steps to Reproduce
+
+# Navigate to Tickets List.
+# Click on the ""Priority"" column header to sort descending.
+# Refresh the browser page.
+
+h3. Expected Result
+
+The list should remain sorted by ""Priority"" descending after refresh.
+
+h3. Actual Result
+
+List reverts to the default sort order (Created date descending).
+
+h3. Severity
+
+Minor
+
+h3. Priority
+
+Low
+
+h3. Module
+
+UI / Usability",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 2:55 PM
+BUG-019: API Response Time Exceeds SLA Under Peak Load,SCRUM-23,10022,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,High,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 3:00 PM,11/Jun/26 3:00 PM,11/Jun/26 3:00 PM,,30/Jun/26 12:00 AM,0,"h3. Summary
+
+The /api/equipment/search endpoint exceeds the 2-second SLA response time during peak usage hours.
+
+h3. Description
+
+During load testing simulating 200 concurrent users, the equipment search API has an average response time of 6.5 seconds, well above the documented 2-second SLA.
+
+h3. Steps to Reproduce
+
+# Run the load test script with 200 concurrent virtual users against /api/equipment/search.
+# Monitor average and 95th percentile response times.
+
+h3. Expected Result
+
+95th percentile response time should remain under 2 seconds under the tested load.
+
+h3. Actual Result
+
+Average response time is 6.5 seconds and 95th percentile exceeds 12 seconds.
+
+h3. Technical Observation
+
+Database query for the search endpoint is missing an index on the ""equipment_status"" column.
+
+h3. Severity
+
+Major
+
+h3. Priority
+
+High
+
+h3. Module
+
+Performance / API",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 3:00 PM
+BUG-020: Profile Image Thumbnail Not Rendered After Upload,SCRUM-24,10023,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,Medium,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 3:05 PM,11/Jun/26 3:05 PM,11/Jun/26 3:05 PM,,,0,"h3. Summary
+
+Uploaded profile picture does not appear as a thumbnail on the user's profile page.
+
+h3. Description
+
+After successfully uploading a new profile picture, the profile page continues to show the default avatar icon instead of the uploaded image.
+
+h3. Steps to Reproduce
+
+# Navigate to My Profile.
+# Click Change Picture and upload a JPEG image.
+# Wait for the success message.
+# Refresh the profile page.
+
+h3. Expected Result
+
+The newly uploaded image should be displayed as the profile thumbnail.
+
+h3. Actual Result
+
+Default avatar icon continues to be displayed; thumbnail is not updated.
+
+h3. Severity
+
+Minor
+
+h3. Priority
+
+Medium
+
+h3. Module
+
+UI / Media",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 3:05 PM
+BUG-021: Duplicate Records Created on Double-Click Form Submission,SCRUM-25,10024,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,High,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 3:10 PM,11/Jun/26 3:10 PM,11/Jun/26 3:10 PM,,30/Jun/26 12:00 AM,0,"h3. Summary
+
+Rapidly double-clicking the Save button on the New Customer form creates two identical customer records.
+
+h3. Description
+
+The Save button is not disabled after the first click, allowing a second click before the page navigates away, which results in duplicate records being submitted to the server.
+
+h3. Steps to Reproduce
+
+# Navigate to New Customer form.
+# Fill in all required fields.
+# Quickly double-click the Save button.
+# Search for the newly created customer.
+
+h3. Expected Result
+
+Only one customer record should be created, and the Save button should be disabled after the first click.
+
+h3. Actual Result
+
+Two identical customer records are created with different Issue ids.
+
+h3. Severity
+
+Major
+
+h3. Priority
+
+High
+
+h3. Module
+
+Form Handling",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 3:10 PM
+BUG-022: Dashboard Layout Breaks on Mobile Viewport,SCRUM-26,10025,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,Medium,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 3:15 PM,11/Jun/26 3:15 PM,11/Jun/26 3:15 PM,,,0,"h3. Summary
+
+Dashboard widgets overlap and become unreadable on mobile screen sizes.
+
+h3. Description
+
+When the application is accessed on a mobile device or a browser window narrower than 480px, the dashboard widgets overlap each other and the navigation menu covers part of the content.
+
+h3. Steps to Reproduce
+
+# Open the application dashboard in a browser.
+# Resize the browser window to 375px width (or open on a mobile device).
+# Observe the layout of the dashboard widgets and navigation menu.
+
+h3. Expected Result
+
+Dashboard should reflow into a single-column responsive layout with no overlapping elements.
+
+h3. Actual Result
+
+Widgets overlap and navigation menu obscures dashboard content.
+
+h3. Severity
+
+Major
+
+h3. Priority
+
+Medium
+
+h3. Module
+
+Responsive Design / UI",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 3:15 PM
+BUG-023: Generic Error Message Shown for Invalid Login Credentials,SCRUM-27,10026,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,Low,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 3:20 PM,11/Jun/26 3:20 PM,11/Jun/26 3:20 PM,,,0,"h3. Summary
+
+Login page displays a generic ""Something went wrong"" message instead of a clear invalid credentials message.
+
+h3. Description
+
+When a user enters an incorrect password, the login page shows a generic server error message rather than informing the user that the username or password is incorrect.
+
+h3. Steps to Reproduce
+
+# Navigate to the Login page.
+# Enter a valid username with an incorrect password.
+# Click Login.
+
+h3. Expected Result
+
+A clear message such as ""Invalid username or password"" should be displayed.
+
+h3. Actual Result
+
+A generic ""Something went wrong, please try again later"" message is displayed, causing user confusion.
+
+h3. Severity
+
+Minor
+
+h3. Priority
+
+Low
+
+h3. Module
+
+Authentication / UX",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 3:20 PM
+BUG-024: Audit Log Does Not Record Delete Operations,SCRUM-28,10027,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,High,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 3:25 PM,11/Jun/26 3:25 PM,11/Jun/26 3:25 PM,,30/Jun/26 12:00 AM,0,"h3. Summary
+
+Deleting a record does not create a corresponding entry in the Audit Log.
+
+h3. Description
+
+The Audit Log is expected to capture create, update, and delete operations for compliance purposes. Delete operations on Customer and Equipment records are not being logged.
+
+h3. Steps to Reproduce
+
+# Navigate to Equipment List.
+# Delete an existing equipment record.
+# Navigate to Audit Log.
+# Search for entries related to the deleted record.
+
+h3. Expected Result
+
+Audit Log should contain an entry showing the user, timestamp, and details of the delete operation.
+
+h3. Actual Result
+
+No audit entry is created for the delete operation.
+
+h3. Severity
+
+Critical
+
+h3. Priority
+
+High
+
+h3. Module
+
+Audit / Compliance",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 3:25 PM
+BUG-025: Stale Data Displayed After Browser Back Navigation,SCRUM-29,10028,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,Medium,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 3:30 PM,11/Jun/26 3:30 PM,11/Jun/26 3:30 PM,,,0,"h3. Summary
+
+Using the browser Back button after submitting a form shows outdated data instead of the updated record.
+
+h3. Description
+
+After updating a Customer record and being redirected to the Customer Details page, pressing the browser Back button returns to the edit form pre-filled with the old (pre-update) values, and resubmitting reverts the changes.
+
+h3. Steps to Reproduce
+
+# Open a Customer record and click Edit.
+# Change the Phone Number field and save.
+# Verify the Customer Details page shows the new phone number.
+# Click the browser Back button.
+# Click Save again without changing anything.
+
+h3. Expected Result
+
+Back navigation should either show cached old data clearly marked as stale or force a reload; resubmitting should not silently revert the previous update.
+
+h3. Actual Result
+
+The phone number reverts to the old value after the second save.
+
+h3. Severity
+
+Minor
+
+h3. Priority
+
+Medium
+
+h3. Module
+
+Caching / Navigation",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 3:30 PM
+BUG-026: Invoice Total Rounding Produces Incorrect Currency Values,SCRUM-30,10029,Bug,To Do,SCRUM,QA Testing 1,software,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,High,,,,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,11/Jun/26 3:35 PM,11/Jun/26 3:35 PM,11/Jun/26 3:35 PM,,30/Jun/26 12:00 AM,0,"h3. Summary
+
+Invoice total amounts are rounded incorrectly, causing a one-cent discrepancy on multi-line invoices.
+
+h3. Description
+
+When an invoice contains line items with fractional unit prices, the displayed total does not match the sum of the individually rounded line totals, resulting in a one-cent mismatch flagged by the finance team during reconciliation.
+
+h3. Formula
+
+Expected:
+Invoice Total = Round(Sum(Line Item Totals), 2)
+
+h3. Observed
+
+System rounds each line item to 2 decimals before summing, but then re-rounds the running subtotal at each step, producing accumulated rounding error.
+
+h3. Steps to Reproduce
+
+# Create an invoice with 5 line items, each with a unit price ending in .005.
+# Set quantity to 3 for each line item.
+# Save the invoice and view the total.
+# Manually calculate the expected total.
+
+h3. Expected Result
+
+Invoice total should match the sum of line totals exactly to the cent.
+
+h3. Actual Result
+
+Invoice total is off by $0.01 compared to the manually calculated expected total.
+
+h3. Severity
+
+Critical
+
+h3. Priority
+
+High
+
+h3. Module
+
+Business Logic Engine",,Shinu n,712020:adcdff4a-16ee-4806-ad8e-9db2446c2fc2,,,,,,,,,,,,,SCRUM Sprint 0,,,,,,,,To Do,11/Jun/26 3:35 PM
